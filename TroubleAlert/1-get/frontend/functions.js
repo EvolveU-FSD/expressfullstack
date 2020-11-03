@@ -3,9 +3,10 @@ function loadPage(){
 }
 
 function loadAlerts(){
-    fetch('http://localhost:8081/alerts', {cache: 'no-store'})
+    fetch('http://localhost:8081/alerts')
     .then(response => response.json())
     .then(alerts => loadAlertsOntoPage(alerts))
+    .catch(error => console.log('error', error))
 }
 
 function loadAlertsOntoPage(alerts){
@@ -17,11 +18,7 @@ function loadAlertsOntoPage(alerts){
 }
 
 function populateAlerts(id, alerts){
-    const alertArea = document.getElementById(id)
-
-    // clears any existing div children from the alertarea... let's use this when alerts change
-    // this is the bluntest way to do this, but it will work for this app
-    alertArea.innerHTML = ''        
+    const alertArea = document.getElementById(id)  
 
     alerts.forEach( alert => {
         const newAlertDiv = document.createElement('div')
@@ -33,14 +30,7 @@ function populateAlerts(id, alerts){
 }
 
 function submitNewAlert(){
-    const newAlertTitle = document.getElementById('newAlertTitle')
-    const alertTitle = newAlertTitle.value
-    fetch('http://localhost:8081/alerts', {
-        method: 'post',
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({newAlert: alertTitle})
-    })
-    .then(loadAlerts)
+    console.log('submit new alert coming soon')
 }
 
 
