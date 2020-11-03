@@ -1,0 +1,205 @@
+input{
+    height: 50px;
+    width: 600px;
+}
+
+div {
+    font-family: Arial;
+    font-weight: bold;
+    color: darkred;
+}
+
+#pictureBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: mistyrose;
+    width: 100%;
+    border: 2px solid darkslategray;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.alertArea{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100px;
+    width: 100%;
+    background: pink;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid darkslategray;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#alerttextArea{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#submitAlertArea
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#addAlertWidget{
+    height: 60px;
+    width: 100%;
+    background: pink;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+img{
+    border-width: 2px;
+    border: 5px solid #555;
+    margin: 25px;
+    height: 500px
+}
+#troubleAlertImage{
+    border-radius: 50px;
+}
+
+#alertImage{
+    border-radius: 250px;
+}
+
+.button{
+    border: 5px solid darkred;
+    border-radius: 20px;
+    background-color: mistyrose;
+    color: darkred;
+    height: 50px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: darkred;
+    color: mistyrose;
+}
+
+.body{  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: powderblue;
+    height: 100vh;
+}
+
+.pageContent{
+    width: 1200px;
+}
+
+.tabIn{
+    margin-left: 20px;
+}
+
+.actionSection{
+    border: 2px solid darkslategray;
+    border-radius: 10px;
+    min-height: 200px;
+    width: 100%;
+    background-color: mistyrose;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+#alerts {
+    border: 2px solid darkslategray;
+    border-radius: 10px;
+    min-height: 200px;
+    width: 100%;
+    background-color: mistyrose;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+#alertsTitle{
+    font-size: 24;
+    margin-bottom: 10px;
+}
+
+.alertColumn{
+    border: 2px solid darkslategray;
+    width: 500px;
+    background-color: whitesmoke;
+    min-height: 300px;
+    border: 2px solid darkslategray;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18;
+}
+
+#alertColumns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: start;
+}
+
+.alertItem{
+    border: 2px solid darkslategray;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 3px;
+    color: darkslateblue;
+    font-weight: normal;
+    font-size: 16;
+    cursor: pointer;
+}
+
+.alertItem:hover{
+    background-color: lightblue;
+}
+
+.alertColumnTitle{
+    margin-bottom: 10px;
+}
+
+#alertText{
+    font-size: 34;
+}
+
+#statusBlock{
+    width: 100%;
+    font-size: 28;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+#statusTitle{
+    margin-right: 30px;
+}
+
+#alertActionButtons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: space-evenly;
+}
+
+.disabledButton{
+    opacity: .5;
+    cursor: default;
+}
+
+.disabledButton:hover{
+    background-color: mistyrose;
+    color: darkred;
+}

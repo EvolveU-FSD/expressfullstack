@@ -1,0 +1,32 @@
+<html>
+    <script src="functions.js"></script>
+    <head>
+        <title>Trouble alert</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="margin: 0px;" style class="body" onLoad='loadPage()' >
+        <div class='pageContent'>
+            <div id='pictureBox'>
+                <img src='TroubleAlert.jpg' alt='Trouble Alert' id='troubleAlertImage'/>
+            </div>
+            <div id='submitAlertArea' class='alertArea'>
+                <div class='tabIn' >Submit a new alert</div>
+                <div id='addAlertWidget'>
+                    <input class='textInput' id='newAlertTitle' type="text" placeholder="Enter alert details" />
+                    <div class='button' onclick='submitNewAlert()'>Submit</div>
+                </div>
+            </div>
+            <div class='actionSection'>
+                <div id="alertsTitle" class='tabIn'>Alerts</div>
+                <div id='alertColumns'>
+                    <div class="alertColumn" id="newAlerts">
+                        <div class="alertColumnTitle"> New</div>
+                    </div>
+                    <div class="alertColumn" id="inProgressAlerts">
+                        <div class="alertColumnTitle">In progress</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

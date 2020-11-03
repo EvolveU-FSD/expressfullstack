@@ -1,0 +1,28 @@
+<html>
+    <script src="functionsForAlert.js"></script>
+    <head>
+        <title>Trouble alert</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="margin: 0px;" style class="body" onload="loadPage()">
+        <div class='pageContent'>
+            <div id='pictureBox'>
+                <img src='wondertwins.jpg' alt='Trouble Alert' id='alertImage'/>
+            </div>
+            <div id='alertTextArea' class='alertArea'>
+                <div id='alertText'></div>
+            </div>
+            <div id="handleAlerts" class='actionSection'>
+                <div id='statusBlock'>
+                    <div id='statusTitle'>Status:</div>
+                    <div id='alertStatus'></div>
+                </div>
+                <div id='alertActionButtons'>
+                    <div class="button" id='dispatchButton' onclick='dispatchHeroes()'>Dispatch heroes</div>
+                    <div class="button" id='deleteButton' onclick='deleteAlert()'>Delete</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+        
