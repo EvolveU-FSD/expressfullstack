@@ -46,11 +46,12 @@ app.get('/alert', function(req, res){                                   // get a
     res.send(alert)                                                     // return the alert
 })
 
-app.put('/alert', function(req, res){                                   
-    const alertNumber = req.query.alertNumber                           
-    const alertIndex = someAlerts.findIndex(alert => alert.id == alertNumber)     
-    someAlerts[alertIndex] = req.body    
-    const newAlert = someAlerts[alertIndex]
+app.put('/alert', function(req, res){                                           
+    const alertNumber = req.query.alertNumber                           // get the alert number (id) from the query
+    const alertIndex =  
+        someAlerts.findIndex(alert => alert.id == alertNumber)          // find the index that matches the id ... this should be related to the id for this code, but if the delete endpoint completely removed records then it could change. Best to be safe
+    someAlerts[alertIndex] = req.body                                   // change the data at the correct index  
+    const newAlert = someAlerts[alertIndex]                             // get the data out of the array ... it probably matches the data in req.body but probably best to return the real data that we are keeping
     res.send(newAlert)                                                     
 })
 
