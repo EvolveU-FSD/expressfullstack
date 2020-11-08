@@ -24,7 +24,7 @@ function populateAlerts(id, alerts){
         const newAlertDiv = document.createElement('div')
         newAlertDiv.classList.add('alertItem')
         newAlertDiv.textContent = alert.title
-        newAlertDiv.onclick=()=>location.href=`alert.html?alertNumber=${alert.id}`
+        // newAlertDiv.onclick=()=>location.href=`alert.html?alertNumber=${alert.id}`
         alertArea.appendChild(newAlertDiv)
     })
 }
