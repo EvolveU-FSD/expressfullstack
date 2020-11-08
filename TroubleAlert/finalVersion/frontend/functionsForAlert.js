@@ -53,7 +53,8 @@ function dispatchHeroes(){
 }
 
 function deleteAlert(){
-    fetch(`http://localhost:8081/alert?alertNumber=${theAlert.id}`, {method: 'DELETE'}) // call delete
-    .then(response => response.json())                                                  // get the body from response json
-    .then(alert => setAlertInfo(alert))                                                 // set the alert info
+    fetch(`http://localhost:8081/alert?alertNumber=${theAlert.id}`,                 // call delete
+        {method: 'DELETE'}) 
+    .then(response => response.json())                                              // get the body from response json
+    .then(alert => setAlertInfo(alert))                                             // set the alert info
 }
