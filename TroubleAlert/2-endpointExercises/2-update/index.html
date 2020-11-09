@@ -1,0 +1,17 @@
+<html>
+    <script src="functions.js"></script>
+    <head>
+        <title>Server Exercise - UPDATE</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="margin: 0px;" style class="body" onLoad='loadPage()' >
+        <div class='inputArea'>
+            <div class="numberText" id="idToChange" placeholder="ID">Record: 1</div>
+            <input style="text" id="newTitle" placeholder="New Name"/>
+            <div class="button" onclick="changeWithPut()">Change With Put</div>
+            <div class="button" onclick="changeWithPatch()">Change With Patch</div>
+        </div>
+        <div class='records' id='showAllRecords'>
+        </div>
+    </body>
+</html>
