@@ -1,0 +1,30 @@
+body {
+    background-color: aliceblue;
+}
+
+input {
+    margin-right: 15px;
+    width: 500px;
+}
+
+.inputArea{
+    width: 100%;
+    background-color: teal;
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    justify-content: center;
+}
+
+.numberText{
+    width: 80px
+}
+
+.button{
+    height: 20px;
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+}
