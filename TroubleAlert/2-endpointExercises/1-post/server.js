@@ -23,4 +23,5 @@ app.post('/records', function(req,res){
     const newRecord = req.body
     newRecord.id = someData.length+1
     someData.push(req.body)
+    res.sendStatus(200)
 })

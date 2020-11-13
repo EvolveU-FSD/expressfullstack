@@ -20,3 +20,46 @@ app.get('/records', function(req, res){
 })
 
 // your app.put and app.push here
+app.put('/records/:recordId', function(req, res) {
+    // get the parameters from the request
+    let id = req.params.recordId
+    let newRecord = req.body
+
+    console.log('Going to replace record ' + id + ' with ', newRecord)
+
+    // do the thing
+    let replaceIndex = someData.findIndex((data) => data.id == id)
+    console.log('Found the record at index:', replaceIndex)
+
+    if (replaceIndex !== -1) {
+        someData[replaceIndex] = newRecord
+    }
+
+    // make a response
+    res.sendStatus(200)
+})
+
+app.patch('/records/:recordId', function(req, res) {
+    // get the parameters from the request
+    let id = req.params.recordId
+    let patchRecord = req.body
+
+    console.log('Going to patch record ' + id + ' with ', patchRecord)
+
+    // do the thing
+    let patchIndex = someData.findIndex((data) => data.id == id)
+    console.log('Found the record at index:', patchIndex)
+
+    if (patchIndex !== -1) {
+        let existingRecord = someData[patchIndex]
+        let newData = { ...existingRecord, ...patchRecord }
+        someData[patchIndex] = newData
+        console.log('Patching record at index ' + patchIndex + ' with ', newData)
+        // make a response
+        res.sendStatus(200)
+    }
+    else {
+        res.sendStatus(404)
+    }
+    
+})
